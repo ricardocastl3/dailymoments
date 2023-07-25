@@ -1,0 +1,37 @@
+@import "/src/app/scss/colors.scss";
+@import "/src/app/scss/mixins.scss";
+@import "/src/app/scss/variables.scss";
+
+.container {
+  margin-top: 1em;
+  .c-header {
+    margin-top: 1em;
+    @include flex-row();
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 30px;
+    }
+    .c-head-uname {
+      margin-left: 1em;
+      line-height: 20px;
+      @include flex-col();
+      h3 {
+        font-size: 1em;
+      }
+      h4 {
+        font-size: 0.8em;
+        color: $secondary-color;
+        font-weight: lighter;
+      }
+    }
+  }
+
+  .c-content {
+    margin-top: 1em;
+    p {
+      font-size: 1em;
+      line-height: 30px;
+    }
+  }
+}

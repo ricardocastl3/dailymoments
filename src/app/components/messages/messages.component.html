@@ -1,0 +1,11 @@
+<div class="backtrop" *ngIf="messageService.message">
+    <div class="dialog">
+        <div class="dialog-header">
+            <h2>Good news!</h2>
+            <button class="clear" (click)="messageService.clear()">
+                <fa-icon [icon]="faTimes"></fa-icon>
+            </button>
+        </div>
+        <p>{{ messageService.message }}</p>
+    </div>
+</div>

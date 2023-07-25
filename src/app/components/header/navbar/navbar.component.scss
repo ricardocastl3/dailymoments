@@ -1,0 +1,92 @@
+@import "../../../scss/colors.scss";
+@import "../../../scss/mixins.scss";
+@import "../../../scss/variables.scss";
+
+.navbar {
+  z-index: 20;
+  position: fixed;
+  inset: 0 0 auto 0;
+  padding: 2em 0em;
+  background-color: $white-color;
+  @include boxing-shadow();
+  .container {
+    padding: 0 5em;
+
+    @include flex-row-between();
+    justify-content: space-between;
+
+    .nav-l {
+      a {
+        font-size: 1.2em;
+      }
+    }
+    .nav-m {
+      @include flex-row();
+
+      li {
+        margin-right: 10px;
+      }
+      a {
+        @include flex-row();
+
+        padding: 0.6em;
+        padding-right: 1em;
+        svg {
+          width: 22px;
+          height: 22px;
+          margin-right: 0.8em;
+        }
+
+        &:hover {
+          color: $primary-color;
+          border: 1px solid $primary-color;
+        }
+      }
+    }
+    .nav-r {
+      @include flex-row();
+      li {
+        margin-right: 15px;
+      }
+      li:last-child {
+        margin-right: 0px;
+      }
+      a {
+        @include flex-row();
+        padding: 0.4em;
+        border-radius: 50px;
+        border: 1px solid $black-color;
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+        &:hover {
+          border: 1px solid $primary-color;
+        }
+      }
+      .bar-mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+/*-- Responsive Components --*/
+@media (max-width: $d-smarthphone) {
+  .navbar {
+    .container {
+      padding: 0em 2em;
+      .nav-m {
+        @include display-none();
+      }
+      .nav-r {
+        .bar-settings {
+          display: none;
+        }
+        .bar-mobile {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@mixin boxing-shadow {
+  box-shadow: 1px 0px 1px $black-color;
+}
+
+@mixin display-none{
+  display: none;
+}
+
+@mixin display-block{
+  display: blox;
+}
+
+@mixin display-none{
+  display: none;
+}
+
+/*FLEX-BOX*/
+@mixin flex-row {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-col-between{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@mixin flex-row-no-align-c{
+  display: flex;
+}

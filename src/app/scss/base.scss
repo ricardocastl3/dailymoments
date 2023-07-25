@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Belanosima";
+}
+
+a {
+  color: $black-color;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid $white-color;
+  &:hover {
+    color: $primary-color;
+    transition: 300ms;
+  }
+}
+li {
+  list-style: none;
+}
+body {
+  background-color: $white-color;
+}
+main {
+  margin: 10em 5em;
+}
+
+/*-- Responsive Component --*/
+@media (max-width: $d-smarthphone) {
+  main {
+    margin: 10em 2em;
+    margin-bottom: 10em;
+  }
+}

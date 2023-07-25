@@ -1,0 +1,25 @@
+<form (ngSubmit)="submit()" [formGroup]="shareForm" #formDir="ngForm">
+  <div class="container">
+    <div class="form-group">
+      <label for="">Title to moment</label>
+      <input formControlName="title" type="text" placeholder="Ex.: Visit in England..." />
+      <div *ngIf="title.invalid && formDir.submitted" class="val-error">
+        <h4 *ngIf="title.errors?.['required']">Title is required</h4>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="">Image to moment</label>
+      <input (change)="onFileSelected($event)" type="file" name="" id="" />
+    </div>
+    <div class="form-group">
+      <label for="">Description</label>
+      <textarea formControlName="description" type="text"></textarea>
+      <div *ngIf="description.invalid && formDir.submitted" class="val-error">
+        <h4 *ngIf="description.errors?.['required']">Description is required</h4>
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="submit">{{ btnSubText }}</button>
+    </div>
+  </div>
+</form>

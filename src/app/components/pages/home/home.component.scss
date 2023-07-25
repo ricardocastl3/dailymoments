@@ -1,0 +1,73 @@
+@import "/src/app/scss/colors.scss";
+@import "/src/app/scss/mixins.scss";
+@import "/src/app/scss/variables.scss";
+
+.container {
+  width: 100%;
+  @include flex-col();
+  .m-header {
+    margin-bottom: 10px;
+    .search-m {
+      @include flex-col();
+      width: 100%;
+      margin-top: 2em;
+
+      label {
+        font-size: 0.8em;
+        color: $secondary-color;
+      }
+
+      .s-input {
+        margin-top: 1em;
+        @include flex-row();
+
+        input {
+          padding: 0.8em;
+
+          color: $black-color;
+          outline: none;
+
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
+          border: 1px solid $primary-color;
+          border-left: none;
+        }
+        svg {
+          width: 38px;
+          height: 38px;
+
+          background-color: $primary-color;
+          color: $white-color;
+          border: 1px solid $primary-color;
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+        }
+      }
+    }
+  }
+  .m-cards {
+    width: 100%;
+    @include flex-row();
+    flex-wrap: wrap;
+  }
+}
+
+/*Responsive Component*/
+@media (min-width: $d-desktop) {
+  .s-input {
+    input {
+      width: 25%;
+    }
+  }
+}
+
+@media (max-width: $d-smarthphone) {
+  .s-input {
+    input {
+      width: 100%;
+    }
+  }
+  .m-cards {
+    flex-direction: column;
+  }
+}

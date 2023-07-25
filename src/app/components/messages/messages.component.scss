@@ -1,0 +1,44 @@
+@import "/src/app/scss/colors.scss";
+@import "/src/app/scss/mixins.scss";
+@import "/src/app/scss/variables.scss";
+
+
+
+.backtrop{
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background-color: rgba(0, 0, 0, 0.498);
+    @include flex-row();
+    justify-content: center;
+    align-items: center;
+    .dialog{
+        padding: 2em;
+        background-color: $white-color;
+        border-radius: 10px;
+        .dialog-header{
+            @include flex-row();
+            justify-content: space-between;
+            margin-bottom: 2em;
+            button{
+                border: none;
+                padding: 1em;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/*Responsive Component*/
+@media(min-width: $d-tablet){
+    .dialog{
+        width: 50%;
+    }
+}
+@media(max-width: $d-smarthphone){
+    .dialog{
+        width: 100%;
+        margin: 0em 2em;
+    }
+}

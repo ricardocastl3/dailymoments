@@ -1,0 +1,62 @@
+@import "/src/app/scss/colors.scss";
+@import "/src/app/scss/mixins.scss";
+@import "/src/app/scss/variables.scss";
+
+.container {
+  background-color: rgb(247, 245, 245);
+  border-radius: 40px;
+  padding: 4em 0em;
+  width: 100%;
+  @include flex-col();
+  align-items: center;
+
+  .m-header {
+    @include flex-col();
+    align-items: center;
+
+    line-height: 40px;
+    margin-bottom: 40px;
+    label {
+      color: $secondary-color;
+    }
+  }
+}
+
+/* comments */
+.container-m {
+
+  background-color: rgb(247, 245, 245);
+  border-radius: 40px;
+
+  margin-top: 5em;
+  padding: 4em;
+  width: 100%;
+  
+  @include flex-col();
+ 
+  .m-header {
+    h2{
+      @include flex-row();
+      align-items: center;
+      svg{
+        width: 27px;
+        height: 27px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .m-center{
+    margin-top: 2em;
+  }
+}
+
+/*Responsive Componet*/
+
+@media (max-width: $d-smarthphone) {
+  .container{
+    background-color: transparent;
+  }
+  .container-m{
+    padding: 4em 3em;
+  }
+}

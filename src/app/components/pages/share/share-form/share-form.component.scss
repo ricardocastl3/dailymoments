@@ -1,0 +1,91 @@
+@import "/src/app/scss/colors.scss";
+@import "/src/app/scss/mixins.scss";
+@import "/src/app/scss/variables.scss";
+
+form {
+
+  width: 100%;
+
+  .container {
+
+    width: 100%;
+    @include flex-col();
+ 
+    .form-group {
+      @include flex-col();
+      margin-top: 1em;
+      line-height: 50px;
+     
+
+      input,
+      textarea {
+        border: 2px solid $primary-color;
+        border-radius: 10px;
+        outline: none;
+      }
+
+      textarea {    
+        height: 15em;
+        padding: 2em 2em;
+        padding-bottom: 4em;
+      }
+
+      input[type="text"] {
+        padding: 1em;
+      }
+      input[type="file"] {
+        cursor: pointer;
+        padding: 0.5em;
+        background-color: $primary-color;
+        color: $white-color;
+        &::file-selector-button {
+          cursor: pointer;
+          border: none;
+          border-radius: 15px;
+          padding: 0.4em;
+          margin: 0em 0.5em;
+          background-color: $black-color;
+          color: $white-color;
+          font-weight: bold;
+        }
+        &:hover{
+            background-color: $black-color;
+            transition: 300ms;
+        }
+      }
+
+      button {
+        cursor: pointer;
+        padding: 1em;
+        border: 2px solid $primary-color;
+        border-radius: 20px;
+        background-color: $black-color;
+        color: $white-color;
+      }
+      button:hover {
+        background-color: $primary-color;
+        transition: 300ms;
+      }
+    }
+  }
+}
+
+/*Responsive Component*/
+@media(min-width: $d-desktop)
+{
+    .container{
+        padding: 0em 0em;
+        textarea{
+            width: 40em;
+        }
+    }
+}
+
+@media(max-width: $d-smarthphone)
+{
+    .container{
+        textarea{
+            width: 22em;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&display=swap');
+@import "./app/scss/variables.scss";
+@import "./app/scss/colors.scss";
+@import './app/scss/base.scss';
+@import './app/scss/mixins.scss';
+
+
+.val-error{
+    color: $invalid-color;
+    border-left: 2px solid $invalid-color;
+    font-size: 0.8em;
+    padding-left: 0.6em;
+    line-height: 20px;
+    margin-top: 0.8em;
+}
